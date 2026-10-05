@@ -142,10 +142,28 @@ let sportlased = [
 ["Charlie", 28, [11.1, 11.2, 11.5]]
 ];
 
-sportlased.sort();
-sportlased.reverse();
 
-console.log(sportlased)
+let mySportlaneAlice = sportlased[0][0];
+sportlased[0][2].sort((a, b) => a - b);
+let parim1 = sportlased[0][2][0];
+
+console.log(mySportlaneAlice);
+console.log(parim1);
+
+
+let mySportlaneBob = sportlased[1][0];
+sportlased[1][2].sort((a, b) => a - b);
+let parim2 = sportlased[1][2][0];
+
+console.log(mySportlaneBob);
+console.log(parim2);
+
+let mySportlaneCharlie = sportlased[2][0];
+sportlased[2][2].sort((a, b) => a - b);
+let parim3 = sportlased[2][2][0];
+
+console.log(mySportlaneCharlie);
+console.log(parim3);
 
 
 /*
@@ -156,3 +174,50 @@ Kuupäev 05.10.2026
 console.log("ÜLESANNE №5")
 
 
+let myTemperatuur = 14
+
+if (myTemperatuur > 25) {
+  console.log("Väga kuum ilm");
+} else if (myTemperatuur < 15) {
+  console.log("Jahe ilm");
+} else {
+  console.log("Mõnus temperatuur");
+}
+
+/*
+Nimi - Mark Hardikov
+Kuupäev 05.10.2026
+ülesanne nr 5 Kasutajanime kontroll
+*/
+
+let myKasutaja = "admin";
+if (myKasutaja == "admin") {
+console.log("Tere, administraator!")
+} else {
+  console.log("Tere, külaline!");
+}
+
+/*
+Nimi - Mark Hardikov
+Kuupäev 05.10.2026
+ülesanne nr 5 Ürituse piletite hind
+*/
+
+let vanus = 25;
+let tookogemus = 3;
+
+if (vanus >= 18) {
+   console.log("Olete täisealine.");
+
+   if (tookogemus >= 2) {
+      console.log("Omab piisavalt töökogemust.");
+      console.log("Võite kandideerida ametikohale.");
+   } else {
+      console.log("Ei oma piisavalt töökogemust.");
+      console.log("Palun hankige rohkem töökogemust enne kandideerimist.");
+   }
+}
+
+let vanus = 18;
+let lubatud = (vanus >= 18) ? "S" : "Ei";
+console.log(lubatud); // Väljund: "Jah"
