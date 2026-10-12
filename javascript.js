@@ -198,26 +198,120 @@ console.log("Tere, administraator!")
 }
 
 /*
+
 Nimi - Mark Hardikov
 Kuupäev 05.10.2026
 ülesanne nr 5 Ürituse piletite hind
 */
 
+let piletityyp = "täispilet";
 let vanus = 25;
-let tookogemus = 3;
+let hind = 0;
 
-if (vanus >= 18) {
-   console.log("Olete täisealine.");
 
-   if (tookogemus >= 2) {
-      console.log("Omab piisavalt töökogemust.");
-      console.log("Võite kandideerida ametikohale.");
-   } else {
-      console.log("Ei oma piisavalt töökogemust.");
-      console.log("Palun hankige rohkem töökogemust enne kandideerimist.");
-   }
+if (piletityyp.toLowerCase() === "täispilet") {
+  
+  // Sisemised IF-laused kontrollivad vanust (Täispilet)
+  if (vanus < 18) {
+    hind = 10;
+  } else if (vanus >= 65) {
+    hind = 15;
+  } else {
+    hind = 20; // 18-64 aastased
+  }
+
+  console.log(`Teie soovitud pilet on Täispilet, selle hind on ${hind} eurot.`);
+
+} else if (piletityyp.toLowerCase() === "sooduspilet") {
+  
+  // Sisemised IF-laused kontrollivad vanust (Sooduspilet)
+  if (vanus < 18 || vanus >= 65) {
+    hind = 8;
+  } else {
+    hind = 15; // 18-64 aastased
+  }
+
+  console.log(`Teie soovitud pilet on Sooduspilet, selle hind on ${hind} eurot.`);
+
+} else {
+  console.log("Viga: tundmatu piletitüüp!");
 }
 
-let vanus = 18;
-let lubatud = (vanus >= 18) ? "S" : "Ei";
-console.log(lubatud); // Väljund: "Jah"
+/*
+Nimi - Mark Hardikov
+Kuupäev 12.10.2026
+ülesanne nr 6
+*/
+
+console.log("ÜLESANNE №6");
+
+let myMuutuja = 0;
+let myMuutujaIndex;
+
+switch (true) {
+  case myMuutuja > 0:
+    myMuutujaIndex = "Number on positiivne";
+    break;
+  case myMuutuja < 0:
+    myMuutujaIndex = "Number on negatiivne";
+    break;
+  case myMuutuja === 0:
+    myMuutujaIndex = "Number on null";
+    break;
+  default:
+    myMuutujaIndex = "Tundmatu väärtus";
+}
+
+console.log(myMuutujaIndex);
+
+/*
+Nimi - Mark Hardikov
+Kuupäev 12.10.2026
+ülesanne nr 6 Restoraan
+*/
+
+console.log("ÜLESANNE №6");
+
+let myLauaBroneering = 5;
+let myLauaIndex;
+
+switch (true) {
+  case myLauaBroneering < 3:
+    myLauaIndex = "Valige laud kahele inimesele.";
+    break;
+  case myLauaBroneering < 5:
+    myLauaIndex = "Valige laud neljale inimesele.";
+    break;
+  case myLauaBroneering < 7:
+    myLauaIndex = "Valige laud kuuele inimesele.";
+    break;
+  case myLauaBroneering > 6:
+    myLauaIndex = "Valige suur laud.";
+    break;
+;
+}
+
+console.log(myLauaIndex);
+
+/*
+Nimi - Mark Hardikov
+Kuupäev 12.10.2026
+ülesanne nr 7 Masiiv
+*/
+
+console.log("ÜLESANNE №7");
+
+const products = ["Õunad", "Piim", "Leib", "Juust", "Tomatid", "Kanafilee", "Muna", "Sibul", "Apelsinid", "Riis", "Jogurt", "Kartul", "Kalafilee", "Pasta", "Jogurtijook", "Porgandid", "Virsikud", "Pähklid", "Rosinad", "Kapsas", "Kreeka jogurt", "Veiseliha", "Banaanid", "Oliivid", "Mandlid", "Magus kartul", "Greibid"];
+
+const fruits = ["Apple", "Banana", "Orange"];
+
+function printFruit(fruit) {
+  for (let i = 0; ; i++) {
+   console.log(fruit, i);
+
+}
+
+}
+
+
+fruits.forEach(printFruit);
